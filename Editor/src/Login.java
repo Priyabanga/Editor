@@ -32,12 +32,15 @@ public class Login extends JPanel implements ActionListener {
 		loginP.add(login);
 		loginP.add(register);
 		panel.add(loginP);
-		add(panel);
+		add(panel,"login");
 		c1=(CardLayout) getLayout();
 	}
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub 
+		
+		add(new Register(),"register");
+		c1.show(this,"register");
 		
 	}
 	
